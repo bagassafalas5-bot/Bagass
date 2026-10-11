@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b10">
+
+<title>Bagas Safalas | Sales Consultant Jaecoo Solo</title>
+
+<meta name="description" content="Temukan Jaecoo J5 EV, J7 SHS, dan J8 SHS bersama Bagas Safalas, Sales Consultant Jaecoo Solo. Konsultasi harga, kredit, dan test drive melalui WhatsApp.">
+
+<style>
+:root {
+  --bg: #080b10;
+  --panel: #111720;
+  --gold: #d9b46a;
+  --white: #f8f8f8;
+  --muted: #a8b0bd;
+  --line: rgba(255,255,255,.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1150px, 90%);
+  margin: auto;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,11,16,.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  font-size: 13px;
+  color: #ddd;
+  transition: .2s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid var(--gold);
+  transition: .25s;
+  cursor: pointer;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #111;
+}
+
+.btn-gold:hover {
+  background: #f0d18e;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  color: var(--gold);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--gold);
+  color: #111;
+}
+
+.hero {
+  padding: 48px 0 70px;
+  background:
+    radial-gradient(ellipse at top right, #253344 0%, transparent 55%),
+    linear-gradient(135deg, #080b10, #101925);
+}
+
+.hero-label {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 17px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 6vw, 65px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+  font-size: 15px;
+  margin-bottom: 27px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.banner {
+  margin-top: 42px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+section {
+  padding: 75px 0;
+}
+
+.section-tag {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(27px, 4vw, 39px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-desc {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217,180,106,.6);
+}
+
+.car-placeholder {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse at center, #293849, #111720 70%);
+  color: var(--gold);
+}
+
+.car-placeholder strong {
+  font-size: 34px;
+  letter-spacing: 2px;
+}
+
+.car-placeholder span {
+  color: #aeb8c5;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.card-content {
+  padding: 23px;
+}
+
+.badge {
+  display: inline-block;
+  color: var(--gold);
+  background: rgba(217,180,106,.10);
+  border: 1px solid rgba(217,180,106,.3);
+  padding: 5px 9px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.price-label {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 17px;
+}
+
+.features {
+  list-style: none;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-bottom: 20px;
+}
+
+.features li {
+  font-size: 12px;
+  color: #d0d5dc;
+  margin: 8px 0;
+}
+
+.features li::before {
+  content: "✓";
+  color: var(--gold);
+  margin-right: 9px;
+  font-weight: bold;
+}
+
+.card .btn {
+  width: 100%;
+}
+
+.note {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.finance {
+  background: #0e141d;
+}
+
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.finance-card {
+  border: 1px solid var(--line);
+  padding: 25px;
+  border-radius: 8px;
+  background: #131c28;
+}
+
+.finance-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.finance-card p {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.finance-card .amount {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--gold);
+  margin-bottom: 13px;
+}
+
+.finance-card .installment {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.finance-card .btn {
+  width: 100%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile-box {
+  min-height: 330px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #344356, transparent 70%),
+    var(--panel);
+  padding: 25px;
+}
+
+.profile-initial {
+  width: 90px;
+  height: 90px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #111;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.profile-box p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 18px 0 25px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.benefit {
+  border: 1px solid var(--line);
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.benefit strong {
+  display: block;
+  color: var(--gold);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.contact {
+  background:
+    radial-gradient(ellipse at top, #253344, transparent 70%),
+    #101720;
+}
+
+.contact-box {
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 45px 20px;
+}
+
+.contact-box p {
+  color: var(--muted);
+  max-width: 570px;
+  margin: 15px auto 25px;
+  font-size: 14px;
+}
+
+.contact-box h2 {
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+  background: #25d366;
+  color: #07130a;
+  border-radius: 50px;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0 5px 25px rgba(0,0,0,.35);
+}
+
+@media(max-width: 800px) {
+  nav {
+    gap: 12px;
+  }
+
+  nav a:not(.btn) {
+    display: none;
+  }
+
+  .products,
+  .finance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home">BAGAS <span>SAFALAS</span></a>
+
+    <nav>
+      <a href="#mobil">Katalog</a>
+      <a href="#kredit">Paket Kredit</a>
+      <a href="#tentang">Tentang Saya</a>
+      <a class="btn btn-gold"
+         href="https://wa.me/6281216358213"
+         target="_blank" rel="noopener">
+         Hubungi Saya
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+
+    <div class="hero-label">
+      SALES CONSULTANT · JAECOO SOLO
+    </div>
+
+    <h1>
+      Temukan Mobil Impianmu.<br>
+      <span>Drive Beyond.</span>
+    </h1>
+
+    <p>
+      Kenali jajaran SUV Jaecoo, temukan pilihan yang sesuai
+      kebutuhanmu, dan konsultasikan harga, paket kredit,
+      serta jadwal test drive bersama saya.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#mobil" class="btn btn-gold">Lihat Katalog Mobil</a>
+      <a href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20konsultasi%20mobil%20Jaecoo."
+         class="btn btn-outline" target="_blank" rel="noopener">
+        Konsultasi WhatsApp
+      </a>
+    </div>
+
+    <div class="banner">
+      <img
+        src="banner-jaecoo.jpg"
+        alt="Brosur promo kredit Jaecoo Solo dari Bagas Safalas"
+        onerror="this.style.display='none';">
+    </div>
+
+  </div>
+</section>
+
+
+<section id="mobil">
+  <div class="container">
+
+    <div class="section-tag">EXPLORE THE RANGE</div>
+    <h2 class="section-title">Pilih Jaecoo Favoritmu</h2>
+
+    <p class="section-desc">
+      Jelajahi pilihan SUV Jaecoo dan tanyakan detail spesifikasi,
+      harga terbaru, promo, serta ketersediaan unit.
+    </p>
+
+    <div class="products">
+
+      <!-- J5 EV -->
+      <article class="card">
+        <div class="car-placeholder">
+          <strong>J5 EV</strong>
+          <span>100% ELECTRIC SUV</span>
+        </div>
+
+        <div class="card-content">
+          <span class="badge">FULL ELECTRIC</span>
+          <h3>Jaecoo J5 EV</h3>
+          <p class="subtitle">Modern · Efficient · Sustainable</p>
+
+          <p class="price-label">Harga OTR pada brosur</p>
+          <div class="price">Rp344.900.000</div>
+
+          <ul class="features">
+            <li>Mobil SUV bertenaga listrik</li>
+            <li>Tanpa emisi gas buang dari knalpot</li>
+            <li>Pengisian daya menggunakan listrik</li>
+            <li>Jarak tempuh dan fitur mengikuti varian resmi</li>
+          </ul>
+
+          <a class="btn btn-gold"
+             href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20tertarik%20Jaecoo%20J5%20EV.%20Mohon%20info%20harga%20dan%20spesifikasinya."
+             target="_blank" rel="noopener">
+            Tanya J5 EV
+          </a>
+        </div>
+      </article>
+
+
+      <!-- J7 SHS -->
+      <article class="card">
+        <div class="car-placeholder">
+          <strong>J7 SHS</strong>
+          <span>SUPER HYBRID SUV</span>
+        </div>
+
+        <div class="card-content">
+          <span class="badge">SUPER HYBRID</span>
+          <h3>Jaecoo J7 SHS</h3>
+          <p class="subtitle">Elegant · Powerful · Smart</p>
+
+          <p class="price-label">Harga OTR pada brosur</p>
+          <div class="price">Rp526.700.000</div>
+
+          <ul class="features">
+            <li>Menggunakan teknologi Super Hybrid System</li>
+            <li>Kombinasi mesin dan motor listrik</li>
+            <li>Dirancang untuk kenyamanan perjalanan</li>
+            <li>Fitur mengikuti varian resmi</li>
+          </ul>
+
+          <a class="btn btn-gold"
+             href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20tertarik%20Jaecoo%20J7%20SHS.%20Mohon%20info%20harga%20dan%20spesifikasinya."
+             target="_blank" rel="noopener">
+            Tanya J7 SHS
+          </a>
+        </div>
+      </article>
+
+
+      <!-- J8 SHS -->
+      <article class="card">
+        <div class="car-placeholder">
+          <strong>J8 SHS</strong>
+          <span>PREMIUM SUV</span>
+        </div>
+
+        <div class="card-content">
+          <span class="badge">PREMIUM HYBRID</span>
+          <h3>Jaecoo J8 SHS</h3>
+          <p class="subtitle">Prestige · Comfort · Performance</p>
+
+          <p class="price-label">Harga OTR pada brosur</p>
+          <div class="price">Rp857.900.000</div>
+
+          <ul class="features">
+            <li>Teknologi Super Hybrid System</li>
+            <li>Kabin premium dengan fokus kenyamanan</li>
+            <li>Fitur keselamatan sesuai varian</li>
+            <li>Tanyakan konfigurasi tempat duduk dan fitur</li>
+          </ul>
+
+          <a class="btn btn-gold"
+             href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20tertarik%20Jaecoo%20J8%20SHS.%20Mohon%20info%20harga%20dan%20spesifikasinya."
+             target="_blank" rel="noopener">
+            Tanya J8 SHS
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="note">
+      *Harga mengikuti brosur yang diberikan dan bukan jaminan harga
+      transaksi saat ini. Konfirmasi harga, varian, promo, dan ketersediaan
+      unit kepada dealer resmi sebelum melakukan pemesanan.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="finance" id="kredit">
+  <div class="container">
+
+    <div class="section-tag">FLEXIBLE FINANCING</div>
+    <h2 class="section-title">Pilihan Paket Kredit</h2>
+
+    <p class="section-desc">
+      Berikut angka DP dan angsuran yang tercantum pada brosur kamu.
+      Hubungi saya untuk mengecek simulasi sesuai kebutuhan.
+    </p>
+
+    <div class="finance-grid">
+
+      <div class="finance-card">
+        <h3>Jaecoo J5 EV</h3>
+        <p>DP pada brosur</p>
+        <div class="amount">Rp74.000.000</div>
+
+        <p>Angsuran pada brosur</p>
+        <div class="installment">Rp6.488.000/bulan</div>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20simulasi%20kredit%20Jaecoo%20J5%20EV."
+           target="_blank" rel="noopener">
+          Cek Simulasi
+        </a>
+      </div>
+
+      <div class="finance-card">
+        <h3>Jaecoo J7 SHS</h3>
+        <p>DP pada brosur</p>
+        <div class="amount">Rp98.600.000</div>
+
+        <p>Angsuran pada brosur</p>
+        <div class="installment">Rp9.995.000/bulan</div>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20simulasi%20kredit%20Jaecoo%20J7%20SHS."
+           target="_blank" rel="noopener">
+          Cek Simulasi
+        </a>
+      </div>
+
+      <div class="finance-card">
+        <h3>Jaecoo J8 SHS</h3>
+        <p>DP pada brosur</p>
+        <div class="amount">Rp153.600.000</div>
+
+        <p>Angsuran pada brosur</p>
+        <div class="installment">Rp16.274.000/bulan</div>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20simulasi%20kredit%20Jaecoo%20J8%20SHS."
+           target="_blank" rel="noopener">
+          Cek Simulasi
+        </a>
+      </div>
+
+    </div>
+
+    <p class="note">
+      *Tenor, biaya administrasi, asuransi, persyaratan kredit, dan
+      persetujuan pembiayaan harus dikonfirmasi kepada dealer atau
+      perusahaan pembiayaan. Angka di atas bukan penawaran kredit yang
+      dijamin berlaku.
+    </p>
+
+  </div>
+</section>
+
+
+<section id="tentang">
+  <div class="container about-grid">
+
+    <div class="profile-box">
+      <div class="profile-initial">BS</div>
+      <h2>BAGAS SAFALAS</h2>
+      <p>Sales Consultant · Jaecoo Solo</p>
+      <p style="margin-top:12px">
+        Konsultasi kendaraan dan pembelian mobil Jaecoo.
+      </p>
+    </div>
+
+    <div class="about-copy">
+      <div class="section-tag">YOUR SALES CONSULTANT</div>
+      <h2 class="section-title">
+        Pilih Mobil dengan Lebih Percaya Diri.
+      </h2>
+
+      <p>
+        Saya Bagas Safalas, Sales Consultant Jaecoo Solo.
+        Saya siap membantu kamu mengenal produk, membandingkan
+        pilihan mobil, mendapatkan informasi harga, dan
+        berkonsultasi mengenai proses pembelian.
+      </p>
+
+      <div class="benefits">
+        <div class="benefit">
+          <strong>Konsultasi Produk</strong>
+          Informasi model dan fitur
+        </div>
+
+        <div class="benefit">
+          <strong>Simulasi Kredit</strong>
+          Sesuai kebutuhan pembeli
+        </div>
+
+        <div class="benefit">
+          <strong>Test Drive</strong>
+          Atur jadwal bersama sales
+        </div>
+
+        <div class="benefit">
+          <strong>Informasi Unit</strong>
+          Cek stok dan pilihan warna
+        </div>
+      </div>
+
+      <a class="btn btn-gold"
+         href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20konsultasi%20pembelian%20mobil%20Jaecoo."
+         target="_blank" rel="noopener">
+        Hubungi Bagas
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="contact" id="kontak">
+  <div class="container">
+    <div class="contact-box">
+
+      <div class="section-tag">LET'S TALK</div>
+      <h2>Mobil Impianmu Dimulai di Sini.</h2>
+
+      <p>
+        Ingin tahu harga terbaru, promo, simulasi kredit,
+        ketersediaan unit, atau ingin menjadwalkan test drive?
+        Hubungi saya melalui WhatsApp.
+      </p>
+
+      <a class="btn btn-gold"
+         href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20ingin%20bertanya%20tentang%20mobil%20Jaecoo."
+         target="_blank" rel="noopener">
+        Chat Bagas via WhatsApp
+      </a>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>BAGAS SAFALAS</strong><br>
+      Sales Consultant Jaecoo Solo
+    </div>
+
+    <div>
+      WhatsApp: 0812-1635-8213<br>
+      Informasi harga dapat berubah sewaktu-waktu.
+    </div>
+
+    <div>
+      © <span id="year"></span> Bagas Safalas
+    </div>
+  </div>
+</footer>
+
+
+<a class="whatsapp-float"
+   href="https://wa.me/6281216358213?text=Halo%20Bagas%2C%20saya%20melihat%20website%20Jaecoo%20Solo."
+   target="_blank" rel="noopener"
+   aria-label="Hubungi Bagas melalui WhatsApp">
+  WhatsApp ↗
+</a>
+
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
